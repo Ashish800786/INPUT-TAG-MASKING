@@ -21,9 +21,15 @@ jquery Funcstion
 Masking Patterns:
 ==================
 .inputmask("999-999")
+
 .inputmask("AAA-999")
+
 .inputmask("aaa-999")
+
 .inputmask("+(99)-99999999")
+
 .inputmask("+(999)-999-99999")
+
 .inputmask("+(AAA)-999-99999")
+
 .inputmask("9999-9999-9999-9999")
