@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input Masking</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+    </head>
+    <body>
+        Pin:<input type="text" id="pin" name="pin" style="height: 50px;width:400px;font-size: 25px;font-weight: bold;">
+        Zip:<input type="text" id="zip" name="zip" style="height: 50px;width:400px;font-size: 25px;font-weight: bold;">
+        Adhaar:<input type="text" id="adhaar" name="adhaar" style="height: 50px;width:400px;font-size: 25px;font-weight: bold;" onblur="check_data()">
+    </body>
+    <script>
+        $(document).ready(function()
+        {
+          $('#zip').inputmask("999-999");
+          $('#pin').inputmask("AAA-999");
+        //   $('#adhaar').inputmask("'alias': 'email'");
+        //   $('#adhaar').inputmask("9999-999-9999-9999");
+        //   $('#adhaar').inputmask("9999 999 9999 9999");
+          $("#adhaar").inputmask({
+                mask: '9999 9999 9999',
+                placeholder:'0000 0000 0000 0000',
+                showMaskOnHover: false,
+                showMaskOnFocus: false,
+                onBeforePaste: function (pastedValue, opts) {
+                    var processedValue = pastedValue;
+                    return processedValue;
+                }});
+        });
+
+        function check_data()
+        {
+            // alert($('#zip').val());
+            // alert($('#pin').val());
+            // alert($('#adhaar').val());
+        }
+        </script>
+</html>
