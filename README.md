@@ -20,16 +20,16 @@ jquery Funcstion
 
 Masking Patterns:
 ==================
-.inputmask("999-999")
+ $('selector').inputmask("999-999")
 
-.inputmask("AAA-999")
+ $('selector').inputmask("AAA-999")
 
-.inputmask("aaa-999")
+ $('selector').inputmask("aaa-999")
 
-.inputmask("+(99)-99999999")
+ $('selector').inputmask("+(99)-99999999")
 
-.inputmask("+(999)-999-99999")
+ $('selector').inputmask("+(999)-999-99999")
 
-.inputmask("+(AAA)-999-99999")
+ $('selector').inputmask("+(AAA)-999-99999")
 
-.inputmask("9999-9999-9999-9999")
+ $('selector').inputmask("9999-9999-9999-9999")
